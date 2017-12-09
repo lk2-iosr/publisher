@@ -19,7 +19,7 @@ public class StatsClient {
 
     private static final Logger LOG = LoggerFactory.getLogger(StatsClient.class);
 
-    private static final String STATS_URL = "stats";
+    private static final String STATS_URL = "http://stats";
     private static final String TOP_BY_LIKES = "/topByLikes";
     private static final String TOP_BY_SHARES = "/topByShares";
     private static final String TOP_BY_COMMENTS = "/topByComments";
@@ -37,7 +37,7 @@ public class StatsClient {
         return getForListOfPosts(STATS_URL + TOP_BY_SHARES);
     }
 
-    public List<Post> getTopPostsByComents() {
+    public List<Post> getTopPostsByComments() {
         LOG.debug("Requesting stats for topByComments");
         return getForListOfPosts(STATS_URL + TOP_BY_COMMENTS);
     }
