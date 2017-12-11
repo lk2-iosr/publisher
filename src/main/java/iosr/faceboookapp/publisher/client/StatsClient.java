@@ -19,7 +19,7 @@ public class StatsClient {
 
     private static final Logger LOG = LoggerFactory.getLogger(StatsClient.class);
 
-    private static final String STATS_URL = "http://stats";
+    private static final String STATS_URL = "http://stats:8080/posts";
     private static final String TOP_BY_LIKES = "/topByLikes";
     private static final String TOP_BY_SHARES = "/topByShares";
     private static final String TOP_BY_COMMENTS = "/topByComments";

@@ -34,10 +34,8 @@ public class StatsPublisher {
     @Value("${destination.mail}")
     private String destinationEmail;
 
-    @Scheduled(initialDelayString = "10000", fixedRateString = "#{60000 * ${publish.stats.interval.minutes}}")
+    @Scheduled(initialDelayString = "60000", fixedRateString = "#{60000 * ${publish.stats.interval.minutes}}")
     public void publishStats() {
-        LOG.info("Sending stats to " + destinationEmail);
-
         List<Post> topPostsByLikes = statsClient.getTopPostsByLikes();
         List<Post> topPostsByShares = statsClient.getTopPostsByShares();
         List<Post> topPostsByComments = statsClient.getTopPostsByComments();
