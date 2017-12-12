@@ -10,9 +10,9 @@ It also fetches post statistics from [stats](https://github.com/lk2-iosr/stats) 
 ```git clone https://github.com/lk2-iosr/publisher```
 2. Run 
 ```mvn clean install```. 
-This will build `jar` file and create docker image ``iosr.facebookapp/publisher:<TAG>``
+This will build `jar` file and create docker image ``lk2iosr/publisher:<TAG>``
 3. Run 
-```docker run --env-file <PATH_TO_FILE_WITH_ENVIRONMENT_VARIABLES> iosr.facebookapp/publisher:<TAG>```
+```docker run --env-file <PATH_TO_FILE_WITH_ENVIRONMENT_VARIABLES> lk2iosr/publisher:<TAG>```
 
 ### Environment variables
 
