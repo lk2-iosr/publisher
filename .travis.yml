@@ -1,4 +1,7 @@
 sudo: false
+"services": [
+    "docker"
+],
 language: java
 branches:
   only:
@@ -11,3 +14,6 @@ install: echo "We believe in Maven."
 cache:
   directories:
   - "$HOME/.m2"
+"group": "stable",
+"dist": "trusty",
+"os": "linux"
