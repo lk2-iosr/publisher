@@ -22,8 +22,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<!--<docker.image.prefix>iosr.facebookapp</docker.image.prefix>-->
-		<docker.image.prefix>placzkie</docker.image.prefix>
+		<docker.image.prefix>lk2iosr</docker.image.prefix>
 	</properties>
 
 	<dependencyManagement>
