@@ -18,7 +18,8 @@ import java.util.Set;
 @Repository
 public class PostIdRepository {
 
-    private static final String KEY = "PostIds";
+    @Value("${REDIS_KEY}")
+    private String redisKey;
 
     @Autowired
     private RedisTemplate<String, String> redisTemplate;
@@ -32,15 +33,15 @@ public class PostIdRepository {
     }
 
     public long savePostId(String postId) {
-        return setOperations.add(KEY, postId);
+        return setOperations.add(redisKey, postId);
     }
 
     public Set<String> findAllPostIds() {
-        return setOperations.members(KEY);
+        return setOperations.members(redisKey);
     }
 
     public boolean isMember(String postId) {
-        return setOperations.isMember(KEY, postId);
+        return setOperations.isMember(redisKey, postId);
     }
 
     @Configuration
