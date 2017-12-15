@@ -36,7 +36,7 @@ public class SqsQueueListener {
 
 
     @SqsListener("${publisher.queue.name}")
-    private void receiveMessage(String message) throws IOException {
+    public void receiveMessage(String message) throws IOException {
         SqsMessage sqsMessage = objectMapper.readValue(message, SqsMessage.class);
         LOG.info("Received SQS message {}", sqsMessage);
         handleSqsMessage(sqsMessage);
