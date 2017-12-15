@@ -25,9 +25,12 @@ This will build `jar` file and create docker image ``lk2iosr/publisher:<TAG>``
 * `SPRING_MAIL_PASSWORD` - gmail app password. This is not a regular password for email but app password that needs to 
 be generated;
 * `DESTINATION_MAIL` - email to which notifications will be sent.
+* `REDIS_HOST` - redis db host
 
 
 **2. OPTIONAL**
 * `POST_FILTER_KEYWORD` - keyword which needs to be found in post message so as to send email notification, default 
 value 'hello';
-* `PUBLISH_STATS_INTERVAL_MINUTES` - time interval after which post statistics will be published, default value is 60.
+* `PUBLISH_STATS_INTERVAL_MINUTES` - time interval after which post statistics will be published, default value is 60;
+* `REDIS_PORT` - redis db port, default value 6379;
+* `REDIS_KEY` - redis set key, default value 'PostIds'.
